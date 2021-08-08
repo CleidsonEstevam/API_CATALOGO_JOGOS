@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiCatalogoJogos</name>
+    </assembly>
+    <members>
+        <member name="M:ApiCatalogoJogos.Controllers.V1.JogosController.Obter(System.Int32,System.Int32)">
+            <summary>
+            Buscar todos os jogos de forma paginada
+            </summary>
+            <param name="pagina"></param>
+            <param name="quantidade"></param>
+            <returns>Code 200</returns>
+            <remarks>Code 204</remarks>
+        </member>
+    </members>
+</doc>

@@ -24,7 +24,7 @@ namespace ApiCatalogoJogos.Repositories
             var comando = $"select * from jogos order by id offset { ((pagina - 1) * quantidade)} rows fetch next {quantidade} rows only";
 
             await sqlConnection.OpenAsync();
-            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            SqlCommand sqlCommand       = new SqlCommand(comando, sqlConnection);
             SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
 
             while (sqlDataReader.Read()) 
@@ -74,17 +74,17 @@ namespace ApiCatalogoJogos.Repositories
             var comando = $"select * from jogos where Nome = '{nome}' and Produtora = '{produtora}'";
 
             await sqlConnection.OpenAsync();
-            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            SqlCommand sqlCommand       = new SqlCommand(comando, sqlConnection);
             SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
 
             while (sqlDataReader.Read())
             {
                 jogos.Add(new Jogo
                 {
-                    Id = (Guid)sqlDataReader["id"],
-                    Nome = (string)sqlDataReader["Nome"],
-                    Produtora = (string)sqlDataReader["Produtora"],
-                    Preco = (decimal)sqlDataReader["Preco"]
+                    Id         = (Guid)sqlDataReader["id"],
+                    Nome       = (string)sqlDataReader["Nome"],
+                    Produtora  = (string)sqlDataReader["Produtora"],
+                    Preco      = (decimal)sqlDataReader["Preco"]
                 });
             }
             await sqlConnection.CloseAsync();
@@ -96,7 +96,7 @@ namespace ApiCatalogoJogos.Repositories
             var comando = $"insert into Jogos (Id, Nome, Produtora, Preco) values ('{jogo.Id}', '{jogo.Nome}', '{jogo.Produtora}', {jogo.Preco.ToString().Replace(",", ".")})";
             
             await sqlConnection.OpenAsync();
-            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            SqlCommand sqlCommand       = new SqlCommand(comando, sqlConnection);
             SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
             await sqlConnection.CloseAsync();
         }
@@ -106,7 +106,7 @@ namespace ApiCatalogoJogos.Repositories
             var comando = $"update Jogos set Nome = '{jogo.Nome}', '{jogo.Produtora}', {jogo.Preco.ToString().Replace(",", ".")} where Id = '{jogo.Id}'";
             
             await sqlConnection.OpenAsync();
-            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            SqlCommand sqlCommand       = new SqlCommand(comando, sqlConnection);
             SqlDataReader sqlDataReader = await sqlCommand.ExecuteReaderAsync();
             await sqlConnection.CloseAsync();
         }

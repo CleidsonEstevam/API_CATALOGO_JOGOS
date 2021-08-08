@@ -643,11 +643,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cleid\\Desktop\\API_CATALOGO_JOGOS-main\\ApiCatalogoJogos.csproj",
+      "projectUniqueName": "C:\\Users\\cleid\\Desktop\\API_CATALOGO_JOGO\\ApiCatalogoJogos.csproj",
       "projectName": "ApiCatalogoJogos",
-      "projectPath": "C:\\Users\\cleid\\Desktop\\API_CATALOGO_JOGOS-main\\ApiCatalogoJogos.csproj",
+      "projectPath": "C:\\Users\\cleid\\Desktop\\API_CATALOGO_JOGO\\ApiCatalogoJogos.csproj",
       "packagesPath": "C:\\Users\\cleid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cleid\\Desktop\\API_CATALOGO_JOGOS-main\\obj\\",
+      "outputPath": "C:\\Users\\cleid\\Desktop\\API_CATALOGO_JOGO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

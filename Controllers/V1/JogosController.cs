@@ -24,6 +24,14 @@ namespace ApiCatalogoJogos.Controllers.V1
             _jogoService = jogoService;
         }
 
+        #region "Métodos"
+        /// <summary>
+        /// Buscar todos os jogos de forma paginada
+        /// </summary>
+        /// <param name="pagina"> Indica página que está sendo consultada (Mínimo (1))</param>
+        /// <param name="quantidade">Indica a quantidade de Registros por página (Máximo 50)</param>
+        /// <returns>Code 200 (Sucesso)</returns>
+        /// <remarks>Code 204 (Caso não haja jogos em banco)</remarks>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<JogoViewModel>>> Obter([FromQuery, Range(1, int.MaxValue)] int pagina = 1, [FromQuery, Range (1, 50)] int quantidade = 1) 
         {
@@ -36,6 +44,12 @@ namespace ApiCatalogoJogos.Controllers.V1
             return Ok(jogos);
         }
 
+        /// <summary>
+        /// Buscar jogo pelo seu ID
+        /// </summary>
+        /// <param name="idJogo">Busca um jogo por vez</param>
+        /// <returns>Code 200 (Sucesso)</returns>
+        /// <remarks>Code 204 (Caso não haja o registro do jogo)</remarks>
         [HttpGet("{idJogo:guid}")]
         public async Task<ActionResult<JogoViewModel>> Obter([FromRoute]Guid idJogo)
         {
@@ -47,7 +61,11 @@ namespace ApiCatalogoJogos.Controllers.V1
 
             return Ok(jogo);
         }
-        
+        /// <summary>
+        /// Inserir um novo jogo
+        /// </summary>
+        /// <param name="jogoInputModel"> Passa como paramêtro o objeto jogo</param>       
+        /// <returns>Code 200 (Sucesso)</returns>   
         [HttpPost]
         public async Task<ActionResult<JogoViewModel>> InserirJogo([FromBody] JogoInputModel jogoInputModel)
         {
@@ -63,7 +81,13 @@ namespace ApiCatalogoJogos.Controllers.V1
             }
             
         }
-
+        /// <summary>
+        /// Atualiza jogo existente
+        /// </summary>
+        /// <param name="idJogo">Id do jogo a ser editado</param>
+        /// <param name="jogoInputModel">Componetes do objeto a serem modificados</param>
+        /// <returns>Code 200 (Sucesso)</returns>
+        /// <remarks>Code 204 (Caso não haja o registro do jogo)</remarks>
         [HttpPut("{idJogo:guid}")]
         public async Task<ActionResult> AtualizarJogo([FromRoute] Guid idJogo, [FromBody] JogoInputModel jogoInputModel)
         {
@@ -79,7 +103,7 @@ namespace ApiCatalogoJogos.Controllers.V1
            
         }
 
-        //O patch atualiza apenas uma parte doo recurso e não o recurso inteiro
+        // Obs didatica: O patch atualiza apenas uma parte do recurso e não o recurso inteiro
         [HttpPatch("{idJogo:guid}/preco/{preco:decimal}")]
         public async Task<ActionResult> AtualizarJogo([FromRoute] Guid idJogo, [FromRoute] decimal preco)
         {
@@ -94,6 +118,12 @@ namespace ApiCatalogoJogos.Controllers.V1
             }
         }
 
+        /// <summary>
+        /// Deleta jogo
+        /// </summary>
+        /// <param name="idJogo">Id do jogo a ser deletado</param>
+        /// <returns>Code 200 (Sucesso)</returns>
+        /// <remarks>Code 204 (Caso não haja o registro do jogo)</remarks>
         [HttpDelete]
         public async Task<ActionResult> ApagarJogo(Guid idJogo) 
         {
@@ -108,5 +138,6 @@ namespace ApiCatalogoJogos.Controllers.V1
                 return NotFound("Não existe este jogo!");
             }
         }
+        #endregion
     }
 }

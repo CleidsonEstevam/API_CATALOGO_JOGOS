@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ayi/LC1TlE7TCqUhTe4y5TdGELe5j2Vz7pi62wol+psn89kPv2nMuw/rS5Vbu0GnSiL3bkXGV741yh0Wv0dBfA==",
+  "dgSpecHash": "Ca+HMuA0JcNrEvH9TuMcRoR1mpwjrm3K2Kdf0bw+W5woFym6HUXhN0LU13nywyDF1nqRPaInN0g8C1uuVLj/sQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cleid\\Desktop\\API_CATALOGO_JOGOS-main\\ApiCatalogoJogos.csproj",
+  "projectFilePath": "C:\\Users\\cleid\\Desktop\\API_CATALOGO_JOGO\\ApiCatalogoJogos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cleid\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\cleid\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
