@@ -1,10 +1,17 @@
-# API_CATALOGO_JOGOS
+<h1 align="center">API CATALOGANDO JOGOS</h1>
+<p align="center">Armazenamento e enumeração ordenada de jogos.</p>
+<p align="center">Principais métodos para criação e controle de jogos favoritos.</p>
 
-## API COM ACESSO A BANCO DE DADOS, PARA CADASTRO DE JOGOS.
+<h1 align="center"><img src="https://img.shields.io/static/v1?label=DEVELOPER&message=.NET_WEB_API&color=7159c1&style=for-the-badge&logo=#512BD4"/></dev>
+<p align="center">
+ <a href="#objetivo">Objetivo</a> •
+ <a href="#roadmap">Roadmap</a> • 
+ <a href="#tecnologias">Tecnologias</a> • 
+ <a href="#contribuicao">Contribuição</a> • 
+ <a href="#licenc-a">Licença</a> • 
+ <a href="#autor">Autor</a>
+</p>
 
-### Objetivos: 
-####           1 - Projeto foi desenvolvimento para treinar conceitos de Requisições RestFul de forma assíncrona.
-####           2 - Entendimento do pattern repository e da separação de responsabilidades no projeto.
-####           3 - Aprender fundamentos sobre API com acesso a banco de dados. 
-
-### 
+<h4 align="center"> 
+	🚧 Projeto Concluído...  🚧
+</h4>
